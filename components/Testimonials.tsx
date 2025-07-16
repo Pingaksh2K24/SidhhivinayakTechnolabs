@@ -3,25 +3,23 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import Avatar from 'react-avatar'
 
 const testimonials = [
   {
     name: 'Aditya Sapkal',
     role: 'Academic Director, Bright Path Academy',
     content: '"Sidhhivinayak Technolabs built a smart and efficient platform for our coaching institute. Tasks like class scheduling, student records, and fee tracking have become seamless. Their team is highly professional, responsive, and truly understands the needs of educational institutions. I highly recommend them!"',
-    avatar: '/placeholder-user.jpg',
   },
   {
     name: 'Ajay Wankhade',
     role: 'Founder & Owner, Sidhivinayak Coaching Classes',
     content: '"Before working with Sidhhivinayak Technolabs, our admin work used to take up a lot of time. But their software has streamlined everything from online admissions to result generation. The user interface is clean and modern, and our staff quickly adapted to it. Great work by the team!"',
-    avatar: '/placeholder-user.jpg',
   },
   {
     name: 'Mangesh Umarkar',
     role: 'Founder & Owner, Umarkar Science classes',
     content: '"We needed a customized student management system, and Sidhhivinayak Technolabs delivered exactly what we were looking for. Their team listens carefully, responds quickly, and delivers solutions that actually work. We can now send real-time updates to parents, which has increased trust in our institute."',
-    avatar: '/placeholder-user.jpg',
   },
 ]
 
@@ -57,11 +55,7 @@ export function Testimonials() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center text-center"
             >
-              <img
-                src={testimonials[currentIndex].avatar}
-                alt={testimonials[currentIndex].name}
-                className="w-16 h-16 md:w-20 md:h-20 rounded-full mb-4 object-cover"
-              />
+              <Avatar name={testimonials[currentIndex].name} size="80" round className="mb-4" />
               <p className="text-sm md:text-base text-gray-600 mb-4">{testimonials[currentIndex].content}</p>
               <h3 className="font-semibold text-indigo-700">{testimonials[currentIndex].name}</h3>
               <p className="text-xs md:text-sm text-pink-500">{testimonials[currentIndex].role}</p>

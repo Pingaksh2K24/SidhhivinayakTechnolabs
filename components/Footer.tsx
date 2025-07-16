@@ -70,7 +70,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-2 pt-4 text-center text-xs md:text-sm text-indigo-200">
+        <div className="mt-2 border-t border-indigo-700 pt-4 text-center text-xs md:text-sm text-indigo-200">
           © {new Date().getFullYear()} Sidhhivinayak Technolabs Private Limited. All rights reserved.
         </div>
       </div>
