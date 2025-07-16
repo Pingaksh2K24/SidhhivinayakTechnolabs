@@ -6,22 +6,22 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const testimonials = [
   {
-    name: 'John Doe',
-    role: 'CEO, Tech Innovators',
-    content: 'Sidhhivinayak Technolabs has transformed our business with their innovative software solutions.',
-    avatar: '/placeholder.svg?height=100&width=100',
+    name: 'Aditya Sapkal',
+    role: 'Academic Director, Bright Path Academy',
+    content: '"Sidhhivinayak Technolabs built a smart and efficient platform for our coaching institute. Tasks like class scheduling, student records, and fee tracking have become seamless. Their team is highly professional, responsive, and truly understands the needs of educational institutions. I highly recommend them!"',
+    avatar: '/placeholder-user.jpg',
   },
   {
-    name: 'Jane Smith',
-    role: 'CTO, Data Dynamics',
-    content: 'The data analytics solution provided by Sidhhivinayak Technolabs has given us invaluable insights.',
-    avatar: '/placeholder.svg?height=100&width=100',
+    name: 'Ajay Wankhade',
+    role: 'Founder & Owner, Sidhivinayak Coaching Classes',
+    content: '"Before working with Sidhhivinayak Technolabs, our admin work used to take up a lot of time. But their software has streamlined everything from online admissions to result generation. The user interface is clean and modern, and our staff quickly adapted to it. Great work by the team!"',
+    avatar: '/placeholder-user.jpg',
   },
   {
-    name: 'Mike Johnson',
-    role: 'Founder, WebWizards',
-    content: 'Working with Sidhhivinayak Technolabs on our web development project was a game-changer.',
-    avatar: '/placeholder.svg?height=100&width=100',
+    name: 'Mangesh Umarkar',
+    role: 'Founder & Owner, Umarkar Science classes',
+    content: '"We needed a customized student management system, and Sidhhivinayak Technolabs delivered exactly what we were looking for. Their team listens carefully, responds quickly, and delivers solutions that actually work. We can now send real-time updates to parents, which has increased trust in our institute."',
+    avatar: '/placeholder-user.jpg',
   },
 ]
 
@@ -47,7 +47,7 @@ export function Testimonials() {
         >
           What Our Clients Say
         </motion.h2>
-        <div className="relative bg-white p-6 rounded-lg shadow-lg max-w-3xl mx-auto">
+        <div className="relative bg-white p-6 rounded-lg shadow-lg max-w-3xl mx-auto flex flex-col items-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -60,22 +60,26 @@ export function Testimonials() {
               <img
                 src={testimonials[currentIndex].avatar}
                 alt={testimonials[currentIndex].name}
-                className="w-16 h-16 md:w-20 md:h-20 rounded-full mb-4"
+                className="w-16 h-16 md:w-20 md:h-20 rounded-full mb-4 object-cover"
               />
               <p className="text-sm md:text-base text-gray-600 mb-4">{testimonials[currentIndex].content}</p>
               <h3 className="font-semibold text-indigo-700">{testimonials[currentIndex].name}</h3>
               <p className="text-xs md:text-sm text-pink-500">{testimonials[currentIndex].role}</p>
             </motion.div>
           </AnimatePresence>
+        </div>
+        <div className="flex justify-center gap-6 mt-6">
           <button
             onClick={prevTestimonial}
-            className="absolute top-1/2 -left-4 md:left-4 transform -translate-y-1/2 bg-indigo-100 p-2 rounded-full shadow-md text-indigo-600 hover:bg-indigo-200 transition duration-300"
+            className="bg-indigo-100 p-2 rounded-full shadow-md text-indigo-600 hover:bg-indigo-200 transition duration-300"
+            aria-label="Previous testimonial"
           >
             <ChevronLeft className="h-4 w-4 md:h-6 md:w-6" />
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute top-1/2 -right-4 md:right-4 transform -translate-y-1/2 bg-indigo-100 p-2 rounded-full shadow-md text-indigo-600 hover:bg-indigo-200 transition duration-300"
+            className="bg-indigo-100 p-2 rounded-full shadow-md text-indigo-600 hover:bg-indigo-200 transition duration-300"
+            aria-label="Next testimonial"
           >
             <ChevronRight className="h-4 w-4 md:h-6 md:w-6" />
           </button>

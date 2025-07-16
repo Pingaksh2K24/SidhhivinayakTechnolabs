@@ -3,7 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Code, Globe, Smartphone, GraduationCap, Fingerprint , RadioTower, Server,PenTool, Lightbulb} from 'lucide-react'
+import { Code, Globe, Smartphone, GraduationCap , RadioTower, Server,PenTool, Lightbulb, Bot} from 'lucide-react'
 
 const services = [
   {
@@ -26,10 +26,9 @@ const services = [
     icon: Globe,
   },
   {
-    title: "Biometric attendance system",
-    description: `Providing thumb scanner & facial recognition solutions for secure and accurate attendance tracking. 
-                  Our biometric systems help businesses and institutions streamline workforce management.`,
-    icon: Fingerprint,
+    title: "Farming & Commercial Robotics Solutions",
+    description: `At Sidhhivinayak Technolabs, we deliver smart, customized robotic solutions for agriculture and commercial use designed to automate manual tasks and enhance productivity, precision, and efficiency.`,
+    icon: Bot,
   },
   {
     title: "RFID Solutions",
